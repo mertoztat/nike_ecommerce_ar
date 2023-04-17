@@ -13,7 +13,12 @@ const Banner = () => {
       </div>
       <div className="centerBanner">
         <h1>Explore the Nike AR Sneakers World</h1>
-        <ModelBox />
+        <ModelBox
+          iosSrc="/assets/nikeBox.usdz"
+          glbSrc="/assets/nikeBox.glb"
+          width="20em"
+          height="20em"
+        />
         <button className="btn_explorer">Open the box!</button>
       </div>
       <div className="rightBanner">

@@ -1,6 +1,7 @@
 import React from "react";
 import "@google/model-viewer/lib/model-viewer";
 import Prompt from "assets/Svg/prompt";
+import { IProps } from "./IProps";
 
 declare global {
   namespace JSX {
@@ -30,13 +31,13 @@ interface ModelViewerJSX {
   sx?: any;
 }
 
-const ModelBox = () => {
+const ModelBox: React.FC<IProps> = ({ iosSrc, glbSrc, width, height }) => {
   return (
     <>
       <model-viewer
         id="first"
-        src="/assets/nikeBox.glb"
-        ios-src="/assets/nikeBox.usdz"
+        src={glbSrc}
+        ios-src={iosSrc}
         seamless-poster
         environment-image="neutral"
         exposure="1.0"
@@ -50,8 +51,8 @@ const ModelBox = () => {
         camera-orbit="0deg 90deg 0deg 8.37364m"
         alt="3D model"
         style={{
-          width: "20em",
-          height: "20em",
+          width: width,
+          height: height,
           zIndex: "99",
           position: "relative",
         }}

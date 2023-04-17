@@ -1,0 +1,44 @@
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 100px;
+}
+
+.highlights_right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 55px;
+}
+.highlights_right h1 {
+  font-size: 36px;
+  font-weight: 700px;
+  background: linear-gradient(
+    17deg,
+    rgb(255 0 0) 0%,
+    rgb(123 101 117) 26%,
+    rgba(115, 150, 220, 1) 47%,
+    rgba(45, 104, 204, 1) 63%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.highlights_right p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.highlights_right button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 30px;
+  max-width: 150px;
+  background: rgba(0, 0, 0, 0.447);
+  color: white;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  font-size: 14px;
+}

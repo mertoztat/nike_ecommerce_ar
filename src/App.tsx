@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import Banner from "components/Banner/Banner";
 import Popular from "components/PopularSales/Popular";
+import Highlights from "components/Highlights/Highlights";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       </div>
       <div>
         <Popular />
+        <Highlights />
       </div>
     </>
   );
