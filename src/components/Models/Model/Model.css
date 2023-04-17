@@ -3,15 +3,6 @@
   align-items: center;
   flex-direction: column;
   gap: 12px;
-  background: rgb(42, 182, 142);
-  background: linear-gradient(
-    5deg,
-    rgba(65, 118, 233, 0.747) 17%,
-    rgb(180, 199, 239) 55%,
-    rgb(125, 165, 253) 60%,
-    rgba(56, 105, 212, 0.645) 88%
-  );
-  backdrop-filter: blur(8px);
   border-radius: 20px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;

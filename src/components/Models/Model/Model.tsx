@@ -39,7 +39,7 @@ const Model = () => {
   return (
     <>
       {data?.map((item: any) => (
-        <div className="card_model">
+        <div className="card_model" style={{ background: item.color }}>
           <div className="model_fav">
             <AiFillHeart />
           </div>
