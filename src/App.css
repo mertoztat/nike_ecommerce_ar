@@ -1,5 +1,12 @@
 .header {
-  background-color: red;
+  background: rgb(252, 165, 165);
+  background: linear-gradient(
+    10deg,
+    rgba(252, 165, 165, 1) 0%,
+    rgba(227, 33, 33, 1) 40%,
+    rgba(255, 85, 85, 1) 50%,
+    rgba(229, 51, 51, 1) 55%
+  );
   min-height: 100vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 63%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
 }

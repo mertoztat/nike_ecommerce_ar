@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike7.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike7.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike4.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike4.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike3.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike3.usdz"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "models": [
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike1.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike1.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike2.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike2.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike3.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike3.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike4.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike4.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike5.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike5.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike6.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike6.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike7.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike7.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike8.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike8.usdz"
+    },
+    {
+      "name": "Nike",
+      "glbFile": "/assets/nike9.glb",
+      "price": "200$",
+      "iosSrc": "/assets/nike9.usdz"
+    }
+  ]
+}
