@@ -6,10 +6,10 @@
   background: rgb(42, 182, 142);
   background: linear-gradient(
     5deg,
-    rgba(42, 182, 142, 1) 17%,
-    rgba(215, 251, 215, 1) 55%,
-    rgba(201, 246, 233, 1) 60%,
-    rgba(24, 149, 108, 1) 88%
+    rgba(65, 118, 233, 0.747) 17%,
+    rgb(180, 199, 239) 55%,
+    rgb(125, 165, 253) 60%,
+    rgba(56, 105, 212, 0.645) 88%
   );
   backdrop-filter: blur(8px);
   border-radius: 20px;
@@ -17,12 +17,19 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   padding: 16px 12px;
 }
+.card_model:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
 .model_fav {
   position: relative;
   top: 0;
-  left: 120px;
+  left: 100px;
   font-size: 20px;
   color: white;
+}
+.model_fav:hover {
+  color: red;
 }
 .model_container {
   display: flex;
@@ -43,7 +50,17 @@
   padding: 10px 12px;
   outline: none;
   border: none;
-  background-color: rgba(117, 117, 117, 0.279);
+  background-color: rgba(136, 85, 169, 0.6);
+  color: white;
+  font-size: 14px;
+  border-radius: 15px;
+}
+.model_desc button:hover {
+  text-align: center;
+  padding: 10px 12px;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.888);
   color: white;
   font-size: 14px;
   border-radius: 15px;

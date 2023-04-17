@@ -1,7 +1,8 @@
 import React from "react";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 const Filter = () => {
-  return <div>Filter</div>;
+  return <> Filter</>;
 };
 
 export default Filter;

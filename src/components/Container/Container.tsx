@@ -8,7 +8,7 @@ const Container = () => {
     <div className="container_wrapper">
       <div className="container_header">
         <h1>Top Rated Sales</h1>
-        <div className="sort">a</div>
+        <div className="sort">Sort</div>
       </div>
       <div className="container">
         <div className="container_left">
