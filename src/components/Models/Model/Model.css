@@ -11,6 +11,7 @@
 .card_model:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
+  transition: 0.8s ease-out;
 }
 .model_fav {
   position: relative;

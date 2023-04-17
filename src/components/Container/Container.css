@@ -16,8 +16,9 @@
   margin-top: 80px;
 }
 .container_right {
-  max-width: 10s00px;
+  max-width: 1000px;
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .container_header {

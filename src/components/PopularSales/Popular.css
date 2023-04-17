@@ -29,6 +29,8 @@
 .card_3:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
+  transition: 0.8s ease-out;
+  cursor: pointer;
 }
 .card_1,
 .card_2,
@@ -41,6 +43,7 @@
   height: 150px;
   border-radius: 15px;
   padding: 20px;
+  cursor: pointer;
 }
 .card_1 img,
 .card_2 img,
@@ -75,21 +78,28 @@
 }
 .card_1 img {
   transform: rotate(325deg);
+  cursor: pointer;
 }
 .card_2 img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1) rotate(35deg);
+  cursor: pointer;
 }
 .card_3 img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1) rotate(35deg);
+  cursor: pointer;
 }
 
 .card_1 img:hover {
   transform: rotate(358deg);
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
 }
 
 .card_2 img:hover,
 .card_3 img:hover {
-  transform: scaleX(-1) rotate(360deg);
+  transform: scaleX(-1) rotate(0deg);
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
 }
