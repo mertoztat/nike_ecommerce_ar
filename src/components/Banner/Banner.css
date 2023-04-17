@@ -1,0 +1,83 @@
+.banner_container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBanner {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.left_items {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftCardItem {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 110px;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_items img {
+  width: 60px;
+  height: 60px;
+}
+
+.centerBanner {
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.centerBanner h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.centerBanner h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn_explorer {
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.91);
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.rightBanner {
+  display: flex;
+  flex-direction: column;
+}
+
+.right_items ul li {
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.leftBanner,
+.rightBanner {
+  margin-top: 50px;
+}

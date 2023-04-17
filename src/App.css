@@ -1,0 +1,5 @@
+.header {
+  background-color: red;
+  min-height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 63%, 0% 100%);
+}
