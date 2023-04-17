@@ -1,0 +1,50 @@
+.card_model {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  background: rgb(42, 182, 142);
+  background: linear-gradient(
+    5deg,
+    rgba(42, 182, 142, 1) 17%,
+    rgba(215, 251, 215, 1) 55%,
+    rgba(201, 246, 233, 1) 60%,
+    rgba(24, 149, 108, 1) 88%
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 16px 12px;
+}
+.model_fav {
+  position: relative;
+  top: 0;
+  left: 120px;
+  font-size: 20px;
+  color: white;
+}
+.model_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+.model_desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.model_desc button {
+  text-align: center;
+  padding: 10px 12px;
+  outline: none;
+  border: none;
+  background-color: rgba(117, 117, 117, 0.279);
+  color: white;
+  font-size: 14px;
+  border-radius: 15px;
+}

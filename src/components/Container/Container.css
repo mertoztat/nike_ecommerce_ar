@@ -1,0 +1,30 @@
+.container_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+}
+.container_right {
+  max-width: 1000px;
+  width: 100%;
+}
+.container_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.container_header h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
