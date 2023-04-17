@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import Banner from "components/Banner/Banner";
+import Popular from "components/PopularSales/Popular";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
         <Banner />
       </div>
       <div>
-        <h1>Hello</h1>
+        <Popular />
       </div>
     </>
   );
