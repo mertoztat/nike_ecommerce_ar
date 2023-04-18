@@ -5,6 +5,7 @@ import Popular from "components/PopularSales/Popular";
 import Highlights from "components/Highlights/Highlights";
 import Container from "components/Container/Container";
 import Featured from "components/Featured/Featured";
+import Footer from "components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Highlights />
         <Container />
         <Featured />
+        <Footer />
       </div>
     </>
   );
