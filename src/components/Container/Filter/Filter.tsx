@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import "./Filter.css";
+import ModelData from "Data/data.json";
 
 export interface IProps {
   data: any;
@@ -10,6 +11,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
   const [showGender, setShowGender] = useState<boolean>(false);
   const [showColor, setShowColor] = useState<boolean>(false);
   const [showPrice, setShowPrice] = useState<boolean>(false);
+  const [filterApplied, setFilterApplied] = useState(false);
 
   // filtersları karşılaştırdığımız object
   const [filters, setFilters] = useState({
@@ -53,7 +55,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
     const { gender, color, price } = filters;
 
     return data.filter((item: any) => {
-      const { price: priceType, genderItem, colorItem } = item;
+      const { price: priceType, gender: genderItem, colorItem } = item;
 
       const typeMatches =
         (!price.price200 &&
@@ -94,28 +96,53 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
   useEffect(() => {
     console.log("rendered");
   }, [filters]);
-
+  const clear = () => {
+    setFilters({
+      price: {
+        price200: false,
+        price250: false,
+        price300: false,
+        price500: false,
+      },
+      gender: {
+        Man: false,
+        Woman: false,
+        Unisex: false,
+      },
+      color: {
+        Orange: false,
+        Yellow: false,
+        Blue: false,
+        White: false,
+        Black: false,
+        Red: false,
+        Pink: false,
+      },
+    });
+    setData(Object.entries(ModelData)[0][1]);
+    setFilterApplied(false);
+  };
   const applyButton = () => {
+    setFilterApplied(true);
     const filterRender = multiFilter();
+    type FilterKeys = keyof typeof filters.price &
+      keyof typeof filters.gender &
+      keyof typeof filters.color;
+
     if (
-      filters.price.price200 ||
-      filters.price.price250 ||
-      filters.price.price300 ||
-      filters.price.price500 ||
-      filters.gender.Man ||
-      filters.gender.Woman ||
-      filters.gender.Unisex ||
-      filters.color.Black ||
-      filters.color.Blue ||
-      filters.color.Orange ||
-      filters.color.Pink ||
-      filters.color.Red ||
-      filters.color.White ||
-      filters.color.Yellow
+      Object.keys(filters?.gender).some(
+        (key) => filters?.gender[key as keyof typeof filters.gender]
+      ) ||
+      Object.keys(filters?.color).some(
+        (key) => filters?.color[key as keyof typeof filters.color]
+      ) ||
+      Object.keys(filters?.price).some(
+        (key) => filters?.price[key as keyof typeof filters.price]
+      )
     ) {
       setData(filterRender);
     } else {
-      setData(data);
+      setData(Object.entries(ModelData)[0][1]);
     }
   };
   return (
@@ -281,7 +308,16 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
       )}
 
       <div className="dropdown_footer">
-        <button onClick={applyButton}>Apply</button>
+        <button onClick={clear} disabled={!filterApplied}>
+          Clear
+        </button>
+        <button
+          onClick={applyButton}
+          disabled={filterApplied}
+          className={filterApplied ? "disabled" : ""}
+        >
+          Filter
+        </button>
       </div>
     </div>
   );
