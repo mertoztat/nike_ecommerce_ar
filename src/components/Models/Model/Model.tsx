@@ -76,7 +76,7 @@ const Model: React.FC<IProps> = ({ data }) => {
           <div className="model_container">
             <h2>{item.name}</h2>
             <div className="model_desc">
-              <h4>{item.priceType} $</h4>
+              <h4>{item.price} $</h4>
               <button>
                 <AiOutlineShoppingCart /> Buy Now
               </button>

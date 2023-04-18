@@ -39,7 +39,6 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
   const handleChange = (e: any) => {
     const { name, checked } = e.target;
     const [category, key] = name.split("_");
-    console.log("seçilenn", category, key);
     setFilters((prevFilters: any) => ({
       ...prevFilters,
       [category]: {
@@ -54,7 +53,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
     const { gender, color, price } = filters;
 
     return data.filter((item: any) => {
-      const { type: priceType, genderItem, colorItem } = item;
+      const { price: priceType, genderItem, colorItem } = item;
 
       const typeMatches =
         (!price.price200 &&
