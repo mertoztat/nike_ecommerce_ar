@@ -1,0 +1,92 @@
+.checkboxItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.filter {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.checkboxItem label {
+  align-items: center;
+  margin: 10px 0;
+  display: flex;
+}
+
+.checkboxItem input {
+  margin-right: 15px;
+}
+
+.checkboxItem input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px solid rgba(68, 68, 68, 0.2);
+  border-radius: 6px;
+  transition: 0.4s ease-in-out all;
+  cursor: pointer;
+}
+
+.checkboxItem input[type="checkbox"]:checked {
+  background: #ffbe0b;
+}
+
+.checkboxItem input[type="checkbox"]:checked::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  background: url("../../../assets/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.dropdownTop {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.dropdown_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_footer button {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(83, 58, 97, 0.299);
+
+  color: white;
+}
+.dropdown_footer button:hover {
+  background: rgb(30, 126, 137);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transition: 0.8s ease-out;
+}
