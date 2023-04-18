@@ -34,14 +34,18 @@
   outline: none;
   border: none;
   border-radius: 20px;
-  padding: 20px 30px;
+  padding: 15px 25px;
   max-width: 150px;
   background: rgba(153, 94, 231, 0.721);
   color: white;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
   font-size: 14px;
+  cursor: pointer;
 }
 .highlights_right button:hover {
   background-color: rgb(53, 53, 53);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transition: 0.8s ease-out;
 }
