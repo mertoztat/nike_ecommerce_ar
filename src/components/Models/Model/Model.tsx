@@ -4,6 +4,8 @@ import Prompt from "assets/Svg/prompt";
 import ModelData from "Data/data.json";
 import "./Model.css";
 import { AiOutlineShoppingCart, AiFillHeart } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../../redux";
 
 declare global {
   namespace JSX {
@@ -34,8 +36,13 @@ interface ModelViewerJSX {
 }
 
 const Model = () => {
+  const dispatch = useDispatch();
   const [data, setData] = useState(Object.entries(ModelData)[0][1]);
   console.log(data);
+
+  const cart = useSelector((state: any) => state.cart.cart);
+
+  console.log("CART", cart);
   return (
     <>
       {data?.map((item: any) => (
@@ -74,7 +81,11 @@ const Model = () => {
             <h2>{item.name}</h2>
             <div className="model_desc">
               <h4>{item.price}</h4>
-              <button>
+              <button
+                onClick={() => {
+                  dispatch(addToCart({ items: { ...item } }));
+                }}
+              >
                 <AiOutlineShoppingCart /> Buy Now
               </button>
             </div>
