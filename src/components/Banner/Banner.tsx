@@ -25,16 +25,24 @@ const Banner = () => {
         <div className="right_items">
           <ul>
             <li>
-              <FaFacebook size={30} />
+              <a href="https://www.facebook.com/nike">
+                <FaFacebook size={30} />
+              </a>
             </li>
             <li>
-              <FaTwitter size={30} />
+              <a href="https://twitter.com/Nike">
+                <FaTwitter size={30} />
+              </a>
             </li>
             <li>
-              <FaInstagram size={30} />
+              <a href="https://www.instagram.com/nike/">
+                <FaInstagram size={30} />
+              </a>
             </li>
             <li>
-              <FaYoutube size={30} />
+              <a href="https://www.youtube.com/user/nike">
+                <FaYoutube size={30} />
+              </a>
             </li>
           </ul>
         </div>

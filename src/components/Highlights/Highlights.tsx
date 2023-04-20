@@ -14,13 +14,17 @@ const Highlights = () => {
         />
       </div>
       <div className="highlights_right">
-        <h1> HIGHLIGHTS</h1>
+        <h2> HIGHLIGHTS</h2>
+        <h1> NIKE ABOUT US</h1>
         <p>
-          Our Purpose is to move the world forward. We take action by building
-          community,
-          <br /> protecting our planet and increasing access to sport.
+          The world's largest athletic apparel company, Nike is best known for
+          its footwear, apparel, and equipment.
+          <br /> Founded in 1964 as Blue Ribbon Sports, the company became Nike
+          in 1971 after the Greek goddess of victory.
+          <br /> One of the most valuable brands among sport businesses, Nike
+          employs over 76,000 people worldwide.
         </p>
-        <button>Explora More</button>
+        <a href="https://www.nike.com/tr/">Explora More</a>
       </div>
     </div>
   );
