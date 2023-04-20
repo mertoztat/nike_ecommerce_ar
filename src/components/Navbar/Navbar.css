@@ -1,5 +1,11 @@
 header {
   padding: 40px 35px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #e2202055;
+  backdrop-filter: blur(8px);
+  z-index: 9999;
 }
 
 .logo img {
