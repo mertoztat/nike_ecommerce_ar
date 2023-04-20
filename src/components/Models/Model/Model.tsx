@@ -83,7 +83,7 @@ const Model = () => {
               <h4>{item.price}</h4>
               <button
                 onClick={() => {
-                  dispatch(addToCart({ items: { ...item } }));
+                  dispatch(addToCart(item));
                 }}
               >
                 <AiOutlineShoppingCart /> Buy Now
