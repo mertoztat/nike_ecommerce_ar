@@ -4,73 +4,91 @@
       "id": "1",
       "name": "Nike",
       "glbFile": "/assets/nike1.glb",
-      "price": "200$",
+      "price": "200",
       "iosSrc": "/assets/nike1.usdz",
-      "color": "linear-gradient(0deg, rgba(195,101,34,1) 0%, rgba(253,187,45,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(195,101,34,1) 0%, rgba(253,187,45,1) 100%)",
+      "gender": "Man",
+      "colorItem": "Orange"
     },
     {
       "id": "2",
       "name": "Nike",
       "glbFile": "/assets/nike2.glb",
-      "price": "199.99$",
+      "price": "300",
       "iosSrc": "/assets/nike2.usdz",
-      "color": "linear-gradient(0deg, rgba(34,143,195,1) 0%, rgba(241,253,45,1) 97%)"
+      "color": "linear-gradient(0deg, rgba(34,143,195,1) 0%, rgba(241,253,45,1) 97%)",
+      "gender": "Man",
+      "colorItem": "Yellow"
     },
     {
       "id": "3",
       "name": "Nike",
       "glbFile": "/assets/nike3.glb",
-      "price": "286$",
+      "price": "300",
       "iosSrc": "/assets/nike3.usdz",
-      "color": "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 98%)"
+      "color": "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 98%)",
+      "gender": "Woman",
+      "colorItem": "Black"
     },
     {
       "id": "4",
       "name": "Nike",
       "glbFile": "/assets/nike4.glb",
-      "price": "300$",
+      "price": "500",
       "iosSrc": "/assets/nike4.usdz",
-      "color": "linear-gradient(0deg, rgba(187,185,185,1) 0%, rgba(231,18,18,1) 98%)"
+      "color": "linear-gradient(0deg, rgba(187,185,185,1) 0%, rgba(231,18,18,1) 98%)",
+      "gender": "Man",
+      "colorItem": "Red"
     },
     {
       "id": "5",
       "name": "Nike",
       "glbFile": "/assets/nike5.glb",
-      "price": "245$",
+      "price": "250",
       "iosSrc": "/assets/nike5.usdz",
-      "color": "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,51,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,51,1) 100%)",
+      "gender": "Woman",
+      "colorItem": "Yellow"
     },
     {
       "id": "6",
       "name": "Nike",
       "glbFile": "/assets/nike6.glb",
-      "price": "370$",
+      "price": "300",
       "iosSrc": "/assets/nike6.usdz",
-      "color": "linear-gradient(0deg, rgba(252,131,38,1) 0%, rgba(51,233,255,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(252,131,38,1) 0%, rgba(51,233,255,1) 100%)",
+      "gender": "Man",
+      "colorItem": "Orange"
     },
     {
       "id": "7",
       "name": "Nike",
       "glbFile": "/assets/nike7.glb",
-      "price": "500$",
+      "price": "500",
       "iosSrc": "/assets/nike7.usdz",
-      "color": "linear-gradient(0deg, rgba(91,38,252,1) 0%, rgba(246,51,255,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(91,38,252,1) 0%, rgba(246,51,255,1) 100%)",
+      "gender": "Woman",
+      "colorItem": "Pink"
     },
     {
       "id": "8",
       "name": "Nike",
       "glbFile": "/assets/nike8.glb",
-      "price": "240$",
+      "price": "250",
       "iosSrc": "/assets/nike8.usdz",
-      "color": "linear-gradient(0deg, rgba(246,51,255,1) 0%, rgba(138,138,138,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(246,51,255,1) 0%, rgba(138,138,138,1) 100%)",
+      "gender": "Unisex",
+      "colorItem": "Pink"
     },
     {
       "id": "9",
       "name": "Nike",
       "glbFile": "/assets/nike9.glb",
-      "price": "199.99$",
+      "price": "200",
       "iosSrc": "/assets/nike9.usdz",
-      "color": "linear-gradient(0deg, rgba(18,206,220,1) 0%, rgba(255,255,255,1) 100%)"
+      "color": "linear-gradient(0deg, rgba(18,206,220,1) 0%, rgba(255,255,255,1) 100%)",
+      "gender": "Unisex",
+      "colorItem": "White"
     }
   ]
 }

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "@google/model-viewer/lib/model-viewer";
 import Prompt from "assets/Svg/prompt";
 import ModelData from "Data/data.json";
+
 import "./Model.css";
 import { AiOutlineShoppingCart, AiFillHeart } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../../redux";
 
 declare global {
   namespace JSX {
@@ -14,6 +13,9 @@ declare global {
         React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
     }
   }
+}
+export interface IProps {
+  data: any;
 }
 
 interface ModelViewerJSX {
@@ -35,14 +37,8 @@ interface ModelViewerJSX {
   sx?: any;
 }
 
-const Model = () => {
-  const dispatch = useDispatch();
-  const [data, setData] = useState(Object.entries(ModelData)[0][1]);
+const Model: React.FC<IProps> = ({ data }) => {
   console.log(data);
-
-  const cart = useSelector((state: any) => state.cart.cart);
-
-  console.log("CART", cart);
   return (
     <>
       {data?.map((item: any) => (
@@ -80,12 +76,8 @@ const Model = () => {
           <div className="model_container">
             <h2>{item.name}</h2>
             <div className="model_desc">
-              <h4>{item.price}</h4>
-              <button
-                onClick={() => {
-                  dispatch(addToCart(item));
-                }}
-              >
+              <h4>{item.price} $</h4>
+              <button>
                 <AiOutlineShoppingCart /> Buy Now
               </button>
             </div>
