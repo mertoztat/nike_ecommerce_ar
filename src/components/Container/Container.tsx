@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Container.css";
 import Filter from "./Filter/Filter";
 import Card from "./Card/Card";
+import ModelData from "Data/data.json";
 
 const Container = () => {
+  const [data, setData] = useState(Object.entries(ModelData)[0][1]);
+
   return (
     <div className="container_wrapper">
       <div className="container_header">
@@ -12,10 +15,10 @@ const Container = () => {
       </div>
       <div className="container">
         <div className="container_left">
-          <Filter />
+          <Filter data={data} setData={setData} />
         </div>
         <div className="container_right">
-          <Card />
+          <Card data={data} />
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import Model from "components/Models/Model/Model";
 import React from "react";
 import "./Card.css";
-
-const Card = () => {
+export interface IProps {
+  data: any;
+}
+const Card: React.FC<IProps> = ({ data }) => {
   return (
     <div className="card">
-      <Model />
+      <Model data={data} />
     </div>
   );
 };
