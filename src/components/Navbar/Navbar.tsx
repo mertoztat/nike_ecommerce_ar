@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
 import logo from "assets/logo.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import CartModal from "components/CartModal/CartModal";
 
@@ -45,7 +45,9 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
-      {isCartOpen && <CartModal setIsCartOpen={setIsCartOpen} />}
+      {isCartOpen && (
+        <CartModal setIsCartOpen={setIsCartOpen} navbarCarts={navbarCarts} />
+      )}
     </>
   );
 };

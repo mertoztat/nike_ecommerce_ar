@@ -11,11 +11,9 @@ export interface IProps {
   cartList: [];
 }
 
-const CartModal = ({ setIsCartOpen }: any) => {
+const CartModal = ({ setIsCartOpen, navbarCarts }: any) => {
   const dispatch = useAppDispatch();
   const data = Object.entries(ModelData)[0][1];
-  const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
-  const navbarCarts = Object.entries(cartList);
 
   const deleteFromCartButton = (product: any) => {
     dispatch(deleteFromCart(product));
@@ -43,7 +41,7 @@ const CartModal = ({ setIsCartOpen }: any) => {
       </div>
       <div className="cart-items">
         {navbarCarts &&
-          navbarCarts?.map(([key, value]) => (
+          navbarCarts?.map(([key, value]: any) => (
             <>
               <div className="cartItem">
                 <div className="cartTopItem">
