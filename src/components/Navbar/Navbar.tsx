@@ -5,8 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import CartModal from "components/CartModal/CartModal";
 
+export interface IProps {
+  data: any;
+  cartList: [];
+}
+
 const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+  const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
+  const navbarCarts = Object.entries(cartList);
   return (
     <>
       <header>
@@ -24,10 +31,15 @@ const Navbar = () => {
                 <FaHeart size={20} />
               </li>
               <li className="cart_item">
-                <FaShoppingCart
+                <div
+                  className="notifications"
                   onClick={() => setIsCartOpen(!isCartOpen)}
-                  size={20}
-                />
+                >
+                  <FaShoppingCart size={20} />
+                  <span className="badge">
+                    <small>{navbarCarts?.length}</small>
+                  </span>
+                </div>
               </li>
             </ul>
           </div>

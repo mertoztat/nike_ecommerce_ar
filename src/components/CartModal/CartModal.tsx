@@ -5,7 +5,6 @@ import { useAppDispatch } from "features/hook";
 import ModelBox from "components/Models/ModelBox/ModelBox";
 import { FaTimes } from "react-icons/fa";
 import ModelData from "Data/data.json";
-import { useState } from "react";
 
 export interface IProps {
   data: any;
