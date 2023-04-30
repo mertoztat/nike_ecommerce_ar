@@ -46,6 +46,7 @@
   color: white;
   font-size: 14px;
   border-radius: 15px;
+  cursor: pointer;
 }
 .model_desc button:hover {
   text-align: center;
@@ -56,4 +57,6 @@
   color: white;
   font-size: 14px;
   border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
