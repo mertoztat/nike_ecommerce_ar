@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "@google/model-viewer/lib/model-viewer";
 import Prompt from "assets/Svg/prompt";
 import ModelData from "Data/data.json";
-
 import "./Model.css";
 import { AiOutlineShoppingCart, AiFillHeart } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../../redux";
-
+import { addToCart } from "../../../features/slices/cartSlice";
+import { useSelector } from "react-redux";
+import { useAppDispatch } from "features/hook";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -40,10 +39,16 @@ interface ModelViewerJSX {
 }
 
 const Model: React.FC<IProps> = ({ data }) => {
-  const dispatch = useDispatch();
-  const cart = useSelector((state: any) => state.cart.cart);
-  console.log("CART", cart);
-  console.log(data);
+  const dispatch = useAppDispatch();
+  const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
+  console.log("cartList", cartList);
+
+  const productQuantityIncreaseButtonClick = (item: any) => {
+    dispatch(addToCart(item));
+  };
+
+  console.log("cartList2", cartList);
+
   return (
     <>
       {data?.map((item: any) => (
@@ -82,11 +87,7 @@ const Model: React.FC<IProps> = ({ data }) => {
             <h2>{item.name}</h2>
             <div className="model_desc">
               <h4>{item.price} $</h4>
-              <button
-                onClick={() => {
-                  dispatch(addToCart(item));
-                }}
-              >
+              <button onClick={() => productQuantityIncreaseButtonClick(item)}>
                 <AiOutlineShoppingCart /> Buy Now
               </button>
             </div>
