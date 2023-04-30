@@ -30,25 +30,35 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  color: white;
+
   cursor: pointer;
+}
+.footer_social ul li a {
+  text-decoration: none;
+  color: white;
+}
+.footer_social ul li:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transition: 0.8s ease-out;
 }
 .footer_desc h5 {
   font-weight: 400;
   font-size: 16px;
 }
-.footer_desc h4 {
+
+.footer_item a:first-child {
+  text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  background: linear-gradient(
-    17deg,
-    rgb(255 0 0) 0%,
-    rgb(255, 48, 48) 36%,
-    rgb(67, 113, 204) 60%,
-    rgb(23, 88, 200) 63%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: white;
+}
+.footer_item a:last-child {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+}
+.footer_item a:hover {
+  color: rgba(11, 109, 144, 0.532);
 }

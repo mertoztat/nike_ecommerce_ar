@@ -2,7 +2,7 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
+  padding: 150px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -59,9 +59,12 @@
 }
 
 .right_items ul li {
+  margin-bottom: 15px;
+}
+.right_items ul li a {
   color: white;
   cursor: pointer;
-  margin-bottom: 15px;
+  text-decoration: none;
 }
 
 .leftBanner,

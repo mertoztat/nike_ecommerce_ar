@@ -14,7 +14,9 @@ const Featured = () => {
           overlays, clean finishes and the perfect amount of flash to make you
           shine.
         </p>
-        <button>Explore More</button>
+        <a href="https://sneakernews.com/2022/03/21/nike-lebron-2-retro-white-midnight-navy-varsity-crimson-dr0826-100/">
+          Explore More
+        </a>
       </div>
       <div className="feature_right">
         <img src={NikeShoe} />

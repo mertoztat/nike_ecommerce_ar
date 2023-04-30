@@ -11,24 +11,36 @@ const Footer = () => {
       </div>
       <div className="footer_desc">
         <h5>Designed & Developed by</h5>
-
-        <h4>Hanife Erkalan & Mert Öztat</h4>
+        <div className="footer_item">
+          <a href="https://reactfiberportfoliowebsite.vercel.app/">
+            Hanife Erkalan
+          </a>{" "}
+          & <a href="https://mertoztat.dev/">Mert Öztat</a>
+        </div>
 
         <h5>&copy; {new Date().getFullYear()} </h5>
       </div>
       <div className="footer_social">
         <ul>
           <li>
-            <FaFacebook size={30} />
+            <a href="https://www.facebook.com/nike">
+              <FaFacebook size={25} />
+            </a>
           </li>
           <li>
-            <FaTwitter size={30} />
+            <a href="https://twitter.com/Nike">
+              <FaTwitter size={25} />
+            </a>
           </li>
           <li>
-            <FaInstagram size={30} />
+            <a href="https://www.instagram.com/nike/">
+              <FaInstagram size={25} />
+            </a>
           </li>
           <li>
-            <FaYoutube size={30} />
+            <a href="https://www.youtube.com/user/nike">
+              <FaYoutube size={30} />
+            </a>
           </li>
         </ul>
       </div>
