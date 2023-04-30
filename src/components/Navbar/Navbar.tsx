@@ -2,15 +2,8 @@ import "./Navbar.css";
 import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
 import logo from "assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
-import { setIsOpenCart } from "../../redux";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const cart = useSelector((state: any) => state.cart.cart);
-  // const setIsOpenCart = useSelector((state: any) => state.cart.isCartOpen);
-
-  console.log("asdasd", setIsOpenCart);
-
   return (
     <header>
       <nav>
