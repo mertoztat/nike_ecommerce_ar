@@ -1,0 +1,19 @@
+.header {
+  background-color: #e22020;
+  min-height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+}
+.deneme {
+  max-width: 2000px !important;
+  width: 100% !important;
+}
+/* @media only screen and (max-width: 1400px) {
+  .deneme {
+    width: 1400px !important;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .deneme {
+    width: 920px !important;
+  }
+} */
