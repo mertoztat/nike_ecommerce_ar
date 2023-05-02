@@ -6,6 +6,8 @@ import { useState } from "react";
 import { getAllFavorite } from "features/slices/favoriteSlice";
 import CartModal from "components/CartModal/CartModal";
 import FavModal from "components/FavModal/FavModal";
+import { useDispatch } from "react-redux";
+import { setSearchQuery } from "features/slices/searchSlice";
 
 export interface IProps {
   data: any;
@@ -20,6 +22,13 @@ const Navbar = () => {
   const favoriteList: IFavorite = useSelector(getAllFavorite);
   const navbarCarts = Object.entries(cartList);
   const navbarFavs = Object.entries(favoriteList);
+
+  const dispatch = useDispatch();
+
+  const handleSearchInputChange = (event: any) => {
+    dispatch(setSearchQuery(event.target.value));
+  };
+
   return (
     <>
       <header>
@@ -28,7 +37,11 @@ const Navbar = () => {
             <img src={logo} alt="nike_logo" />
           </div>
           <div className="nav_search">
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={handleSearchInputChange}
+            />
             <FaSearch size={15} className="search_icon" />
           </div>
           <div className="nav_items">

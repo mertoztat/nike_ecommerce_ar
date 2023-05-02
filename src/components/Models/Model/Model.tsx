@@ -15,6 +15,7 @@ import {
 } from "features/slices/favoriteSlice";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "features/hook";
+
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -50,6 +51,7 @@ interface ModelViewerJSX {
 const Model: React.FC<IData> = ({ data }) => {
   const dispatch = useAppDispatch();
   const favoriteList: IProps = useSelector(getAllFavorite);
+  const searchQuery = useSelector((state: any) => state.search);
 
   const productQuantityIncreaseButtonClick = (item: any) => {
     dispatch(addToCart(item));
@@ -62,9 +64,13 @@ const Model: React.FC<IData> = ({ data }) => {
     dispatch(deleteFromFavorite(product.id));
   };
 
+  const filteredData = data?.filter((item: any) =>
+    item?.name.toLowerCase().includes(searchQuery)
+  );
+
   return (
     <>
-      {data?.map((item: any) => (
+      {filteredData?.map((item: any) => (
         <div className="card_model" style={{ background: item.color }}>
           <div className="model_fav">
             {favoriteList.find((favori: any) => favori.id === item.id) ? (
