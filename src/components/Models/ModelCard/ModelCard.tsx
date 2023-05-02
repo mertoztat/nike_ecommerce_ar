@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "@google/model-viewer/lib/model-viewer";
-import Prompt from "assets/Svg/prompt";
+import Prompt from "images/Svg/prompt";
 import ModelData from "Data/modeldata.json";
 import "./ModelCard.css";
 

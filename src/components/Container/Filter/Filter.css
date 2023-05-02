@@ -51,7 +51,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99;
-  background: url("../../../assets/checkbox.png");
+  background: url("../../../images/checkbox.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;

@@ -1,0 +1,56 @@
+.favWrapper {
+  background-color: white;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  border-radius: 21px;
+  transition: 0.8s ease-in-out;
+  z-index: 9999;
+  box-shadow: 0 0 0 5000px rgb(0 0 0 / 75%);
+}
+
+.fav-items::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+.fav-items::-webkit-scrollbar-track {
+  border-radius: 100px;
+}
+
+.fav-items::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 113, 174, 0.721);
+  border-radius: 100px;
+}
+
+.closeBtn {
+  justify-content: space-between;
+  display: flex;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 20px;
+}
+.fav-items {
+  overflow-y: scroll;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  height: 380px;
+}
+
+.favItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.favTopItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+}

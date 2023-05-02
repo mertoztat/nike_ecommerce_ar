@@ -13,14 +13,21 @@
   -webkit-transform: scale(1.1);
   transition: 0.8s ease-out;
 }
+.favoriteIconFill {
+  color: red;
+  cursor: pointer;
+}
+.favoriteIcon {
+  color: white;
+  cursor: pointer;
+}
 .model_fav {
   position: relative;
   top: 0;
   left: 100px;
-  font-size: 20px;
-  color: white;
 }
-.model_fav:hover {
+.favoriteIcon:hover {
+  transition: 0.3s ease-in-out;
   color: red;
 }
 .model_container {

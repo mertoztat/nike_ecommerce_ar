@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "assets/logo.png";
+import logo from "images/logo.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {

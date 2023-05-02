@@ -1,19 +1,25 @@
 import "./Navbar.css";
 import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
-import logo from "assets/logo.png";
+import logo from "images/logo.png";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { getAllFavorite } from "features/slices/favoriteSlice";
 import CartModal from "components/CartModal/CartModal";
+import FavModal from "components/FavModal/FavModal";
 
 export interface IProps {
   data: any;
   cartList: [];
 }
+type IFavorite = any[] | any;
 
 const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+  const [isFavOpen, setIsFavOpen] = useState<boolean>(false);
   const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
+  const favoriteList: IFavorite = useSelector(getAllFavorite);
   const navbarCarts = Object.entries(cartList);
+  const navbarFavs = Object.entries(favoriteList);
   return (
     <>
       <header>
@@ -28,7 +34,15 @@ const Navbar = () => {
           <div className="nav_items">
             <ul>
               <li className="cart_fav">
-                <FaHeart size={20} />
+                <div
+                  className="notifications"
+                  onClick={() => setIsFavOpen(!isFavOpen)}
+                >
+                  <FaHeart size={20} />
+                  <span className="badge">
+                    <small>{navbarFavs?.length}</small>
+                  </span>
+                </div>
               </li>
               <li className="cart_item">
                 <div
@@ -45,6 +59,9 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
+      {isFavOpen && (
+        <FavModal setIsFavOpen={setIsFavOpen} navbarFavs={navbarFavs} />
+      )}
       {isCartOpen && (
         <CartModal setIsCartOpen={setIsCartOpen} navbarCarts={navbarCarts} />
       )}

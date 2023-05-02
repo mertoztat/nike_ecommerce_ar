@@ -1,8 +1,8 @@
 import React from "react";
 import "./Popular.css";
-import Nikepopular1 from "assets/nikepopular1.png";
-import Nikepopular2 from "assets/nikepopular2.png";
-import Nikepopular3 from "assets/nikepopular3.png";
+import Nikepopular1 from "images/nikepopular1.png";
+import Nikepopular2 from "images/nikepopular2.png";
+import Nikepopular3 from "images/nikepopular3.png";
 import { AiFillStar } from "react-icons/ai";
 
 const Popular = () => {

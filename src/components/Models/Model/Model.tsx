@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "@google/model-viewer/lib/model-viewer";
-import Prompt from "assets/Svg/prompt";
-import ModelData from "Data/data.json";
+import Prompt from "images/Svg/prompt";
 import "./Model.css";
-import { AiOutlineShoppingCart, AiFillHeart } from "react-icons/ai";
-import { addToCart } from "../../../features/slices/cartSlice";
+import {
+  AiOutlineShoppingCart,
+  AiFillHeart,
+  AiOutlineHeart,
+} from "react-icons/ai";
+import { addToCart } from "features/slices/cartSlice";
+import {
+  addToFavorite,
+  deleteFromFavorite,
+  getAllFavorite,
+} from "features/slices/favoriteSlice";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "features/hook";
 declare global {
@@ -15,9 +23,10 @@ declare global {
     }
   }
 }
-export interface IProps {
+export interface IData {
   data: any;
 }
+type IProps = any[] | any;
 
 interface ModelViewerJSX {
   src: string;
@@ -38,23 +47,39 @@ interface ModelViewerJSX {
   sx?: any;
 }
 
-const Model: React.FC<IProps> = ({ data }) => {
+const Model: React.FC<IData> = ({ data }) => {
   const dispatch = useAppDispatch();
-  const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
-  console.log("cartList", cartList);
+  const favoriteList: IProps = useSelector(getAllFavorite);
 
   const productQuantityIncreaseButtonClick = (item: any) => {
     dispatch(addToCart(item));
   };
+  const favoriteButtonOnClick = (product: any) => {
+    dispatch(addToFavorite(product));
+  };
 
-  console.log("cartList2", cartList);
+  const deleteFavoriteButtonOnClick = (product: any) => {
+    dispatch(deleteFromFavorite(product.id));
+  };
 
   return (
     <>
       {data?.map((item: any) => (
         <div className="card_model" style={{ background: item.color }}>
           <div className="model_fav">
-            <AiFillHeart />
+            {favoriteList.find((favori: any) => favori.id === item.id) ? (
+              <AiFillHeart
+                size={25}
+                className="favoriteIconFill"
+                onClick={() => deleteFavoriteButtonOnClick(item)}
+              />
+            ) : (
+              <AiOutlineHeart
+                size={25}
+                className="favoriteIcon"
+                onClick={() => favoriteButtonOnClick(item)}
+              />
+            )}
           </div>
           <model-viewer
             id="first"

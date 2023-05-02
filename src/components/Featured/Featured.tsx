@@ -1,6 +1,6 @@
 import React from "react";
 import "./Featured.css";
-import NikeShoe from "assets/nikeshoe.png";
+import NikeShoe from "images/nikeshoe.png";
 
 const Featured = () => {
   return (

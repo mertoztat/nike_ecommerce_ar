@@ -1,6 +1,5 @@
 import "./CartModal.css";
 import { addToCart, deleteFromCart } from "../../features/slices/cartSlice";
-import { useSelector } from "react-redux";
 import { useAppDispatch } from "features/hook";
 import ModelBox from "components/Models/ModelBox/ModelBox";
 import { FaTimes } from "react-icons/fa";
@@ -8,7 +7,6 @@ import ModelData from "Data/data.json";
 
 export interface IProps {
   data: any;
-  cartList: [];
 }
 
 const CartModal = ({ setIsCartOpen, navbarCarts }: any) => {
