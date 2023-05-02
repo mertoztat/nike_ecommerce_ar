@@ -93,9 +93,8 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
     });
   };
 
-  useEffect(() => {
-    console.log("rendered");
-  }, [filters]);
+  useEffect(() => {}, [filters]);
+
   const clear = () => {
     setFilters({
       price: {

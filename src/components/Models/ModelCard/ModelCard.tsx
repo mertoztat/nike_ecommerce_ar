@@ -34,11 +34,10 @@ interface ModelViewerJSX {
 
 const ModelCard = () => {
   const [data, setData] = useState(Object.entries(ModelData)[0][1]);
-  // console.log(data);
   return (
     <>
       {data?.map((item: any) => (
-        <div className="modelcard">
+        <div key={item.id} className="modelcard">
           <model-viewer
             id="first"
             src={item.glbFile}

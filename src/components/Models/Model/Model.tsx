@@ -71,7 +71,11 @@ const Model: React.FC<IData> = ({ data }) => {
   return (
     <>
       {filteredData?.map((item: any) => (
-        <div className="card_model" style={{ background: item.color }}>
+        <div
+          key={item.id}
+          className="card_model"
+          style={{ background: item.color }}
+        >
           <div className="model_fav">
             {favoriteList.find((favori: any) => favori.id === item.id) ? (
               <AiFillHeart
