@@ -103,3 +103,9 @@
   transition: 0.8s ease-in-out;
   cursor: pointer;
 }
+
+@media (max-width: 640px) {
+  .popular_cards {
+    gap: 50px;
+  }
+}

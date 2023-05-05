@@ -48,3 +48,17 @@
   -webkit-transform: scale(1.1);
   transition: 0.8s ease-out;
 }
+
+@media (max-width: 980px) {
+  .highlights {
+    display: flex;
+    flex-direction: column;
+  }
+  .highlights_left {
+    display: flex;
+    justify-content: center;
+  }
+  .highlights_right {
+    margin-top: 25px;
+  }
+}

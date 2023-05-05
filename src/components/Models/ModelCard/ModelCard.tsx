@@ -36,8 +36,8 @@ const ModelCard = () => {
   const [data, setData] = useState(Object.entries(ModelData)[0][1]);
   return (
     <>
-      {data?.map((item: any) => (
-        <div key={item.id} className="modelcard">
+      {data?.map((item: any, index: number) => (
+        <div key={index} className="modelcard">
           <model-viewer
             id="first"
             src={item.glbFile}

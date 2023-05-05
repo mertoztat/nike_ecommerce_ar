@@ -71,3 +71,30 @@
 .rightBanner {
   margin-top: 50px;
 }
+
+@media (max-width: 990px) {
+  .centerBanner h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .rightBanner {
+    display: none;
+  }
+  .banner_container {
+    flex-direction: column;
+  }
+  .centerBanner {
+    display: none;
+  }
+  .leftBanner {
+    display: flex;
+  }
+  .left_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

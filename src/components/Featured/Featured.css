@@ -50,10 +50,11 @@
   transition: 0.8s ease-out;
 }
 .feature_right img {
-  width: 580px;
-  height: 350px;
+  max-width: 580px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
   margin-top: 50px;
-  margin-right: 90px;
   transform: rotate(320deg);
   z-index: 99;
   position: relative;
@@ -62,4 +63,10 @@
   transform: rotate(358deg);
   transition: 0.8s ease-in-out;
   cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .feature_right img {
+    display: none;
+  }
 }
