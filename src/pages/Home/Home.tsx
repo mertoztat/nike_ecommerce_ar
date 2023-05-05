@@ -11,20 +11,15 @@ import Footer from "components/Footer/Footer";
 const Home = () => {
   return (
     <>
-      <div className="deneme">
-        <Navbar />
-        <div className="header">
-          <Banner />
-        </div>
-
-        <div className="deneme">
-          <Popular />
-          <Highlights />
-          <Container />
-          <Featured />
-          <Footer />
-        </div>
+      <Navbar />
+      <div className="header">
+        <Banner />
       </div>
+      <Popular />
+      <Highlights />
+      <Container />
+      <Featured />
+      <Footer />
     </>
   );
 };
