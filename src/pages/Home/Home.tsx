@@ -7,6 +7,7 @@ import Highlights from "components/Highlights/Highlights";
 import Container from "components/Container/Container";
 import Featured from "components/Featured/Featured";
 import Footer from "components/Footer/Footer";
+import ScrollToTopButton from "components/ScrollToTopButton/ScrollToTopButton";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Highlights />
       <Container />
       <Featured />
+      <ScrollToTopButton />
       <Footer />
     </>
   );
