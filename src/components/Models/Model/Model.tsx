@@ -25,7 +25,7 @@ declare global {
   }
 }
 export interface IData {
-  data: any;
+  filteredData: any;
 }
 type IProps = any[] | any;
 
@@ -48,10 +48,9 @@ interface ModelViewerJSX {
   sx?: any;
 }
 
-const Model: React.FC<IData> = ({ data }) => {
+const Model: React.FC<IData> = ({ filteredData }) => {
   const dispatch = useAppDispatch();
   const favoriteList: IProps = useSelector(getAllFavorite);
-  const searchQuery = useSelector((state: any) => state.search);
 
   const productQuantityIncreaseButtonClick = (item: any) => {
     dispatch(addToCart(item));
@@ -63,10 +62,6 @@ const Model: React.FC<IData> = ({ data }) => {
   const deleteFavoriteButtonOnClick = (product: any) => {
     dispatch(deleteFromFavorite(product.id));
   };
-
-  const filteredData = data?.filter((item: any) =>
-    item?.name.toLowerCase().includes(searchQuery)
-  );
 
   return (
     <>
