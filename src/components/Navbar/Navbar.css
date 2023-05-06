@@ -22,14 +22,10 @@ nav {
   width: 100%;
 }
 
-.nav_items {
-}
-
 .nav_items ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   width: 100%;
   margin-left: 20px;
 }
@@ -71,7 +67,7 @@ nav {
 .notifications {
   cursor: pointer;
   position: relative;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .badge {
@@ -100,5 +96,14 @@ nav {
 @media (max-width: 640px) {
   .header {
     min-height: 60vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav_items ul {
+    margin-left: 10px;
+  }
+  .nav_search input {
+    width: 150px;
   }
 }

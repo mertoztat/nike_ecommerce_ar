@@ -1,17 +1,26 @@
 import "./FavModal.css";
 import ModelBox from "components/Models/ModelBox/ModelBox";
 import { FaTimes } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 export interface IProps {
   data: any;
 }
 
 const FavModal = ({ setIsFavOpen, navbarFavs }: any) => {
+  console.log("navbarFav", navbarFavs);
+
   return (
     <div className="favWrapper">
       <div className="closeBtn">
         <h2>Favorites </h2>
-        <FaTimes onClick={() => setIsFavOpen(false)} />
+        <FaTimes
+          style={{
+            color: "rgba(71, 36, 117, 0.89)",
+            cursor: "pointer",
+          }}
+          onClick={() => setIsFavOpen(false)}
+        />
       </div>
       <div className="fav-items">
         {navbarFavs &&
@@ -30,6 +39,7 @@ const FavModal = ({ setIsFavOpen, navbarFavs }: any) => {
               </div>
             </>
           ))}
+        {navbarFavs.length === 0 ? <h3>No Favorite Items...</h3> : ""}
       </div>
     </div>
   );

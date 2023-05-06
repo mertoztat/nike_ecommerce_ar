@@ -31,14 +31,22 @@
   justify-content: space-between;
   display: flex;
   font-size: 24px;
-  cursor: pointer;
   margin: 20px;
 }
 .fav-items {
   overflow-y: scroll;
   scrollbar-color: #d4aa70 #e4e4e4;
   scrollbar-width: thin;
-  height: 380px;
+  height: 305px;
+}
+
+.fav-items h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
+  color: rgba(71, 36, 117, 0.89);
 }
 
 .favItem {
@@ -53,4 +61,11 @@
   align-items: center;
   gap: 10px;
   justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .favWrapper {
+    width: 300px;
+    height: 400px;
+  }
 }

@@ -4,6 +4,7 @@ import { useAppDispatch } from "features/hook";
 import ModelBox from "components/Models/ModelBox/ModelBox";
 import { FaTimes } from "react-icons/fa";
 import ModelData from "Data/data.json";
+import { useSelector } from "react-redux";
 
 export interface IProps {
   data: any;
@@ -12,6 +13,8 @@ export interface IProps {
 const CartModal = ({ setIsCartOpen, navbarCarts }: any) => {
   const dispatch = useAppDispatch();
   const data = Object.entries(ModelData)[0][1];
+  const cartList: IProps = useSelector((state: any) => state?.carts?.cartList);
+  const navCartItems = Object.entries(cartList);
 
   const deleteFromCartButton = (product: any) => {
     dispatch(deleteFromCart(product));
@@ -31,11 +34,19 @@ const CartModal = ({ setIsCartOpen, navbarCarts }: any) => {
     return total;
   };
 
+  console.log("navCartItems", navCartItems);
+
   return (
     <div className="cartWrapper">
       <div className="closeBtn">
         <h2>Cart </h2>
-        <FaTimes onClick={() => setIsCartOpen(false)} />
+        <FaTimes
+          style={{
+            color: "rgba(71, 36, 117, 0.89)",
+            cursor: "pointer",
+          }}
+          onClick={() => setIsCartOpen(false)}
+        />
       </div>
       <div className="cart-items">
         {navbarCarts &&
@@ -71,11 +82,15 @@ const CartModal = ({ setIsCartOpen, navbarCarts }: any) => {
                 </div>
               </div>
             </>
-          ))}{" "}
-        <div className="cart-total">
-          <h1>Subtotal: {cartTotalPrice()}</h1>
-          <button>Satın Al</button>
-        </div>
+          ))}
+        {navCartItems.length === 0 ? (
+          <h3>No Cart Items...</h3>
+        ) : (
+          <div className="cart-total">
+            <h1>Subtotal: {cartTotalPrice()}</h1>
+            <button>Satın Al</button>
+          </div>
+        )}
       </div>
     </div>
   );
