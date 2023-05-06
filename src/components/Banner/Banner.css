@@ -87,12 +87,13 @@
     flex-direction: column;
   }
   .centerBanner {
-    display: none;
-  }
-  .leftBanner {
     display: flex;
   }
+  .leftBanner {
+    display: none;
+  }
   .left_items {
+    display: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

@@ -148,7 +148,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
     <div className="filter">
       <div className="dropdownTop" onClick={() => setShowPrice(!showPrice)}>
         Price
-        {showPrice ? <FaAngleDown /> : <FaAngleUp />}
+        {!showPrice ? <FaAngleDown /> : <FaAngleUp />}
       </div>
       {!showPrice && (
         <div className="dropdownWrapper">
@@ -197,7 +197,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
         Gender
         {showGender ? <FaAngleDown /> : <FaAngleUp />}
       </div>
-      {!showGender && (
+      {showGender && (
         <div className="dropdownWrapper">
           <div className="checkboxItem">
             <label htmlFor="">
@@ -236,7 +236,7 @@ const Filter: React.FC<IProps> = ({ data, setData }) => {
         Color
         {showColor ? <FaAngleDown /> : <FaAngleUp />}
       </div>
-      {!showColor && (
+      {showColor && (
         <div className="dropdownWrapper">
           <div className="checkboxItem">
             <label htmlFor="">

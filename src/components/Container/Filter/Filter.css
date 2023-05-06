@@ -95,3 +95,27 @@
   -webkit-transform: scale(1.1);
   transition: 0.8s ease-out;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .checkboxItem {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 3fr));
+    grid-gap: 10px;
+    align-items: stretch;
+  }
+  /* .filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 10px;
+    align-items: stretch;
+  } */
+  /* .dropdown_footer {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+  }
+  .dropdown_footer button {
+    padding: 10px 20px;
+  } */
+}
