@@ -16,10 +16,12 @@ const Home = () => {
       <div className="header">
         <Banner />
       </div>
-      <Popular />
-      <Highlights />
-      <Container />
-      <Featured />
+      <main>
+        <Popular />
+        <Highlights />
+        <Container />
+        <Featured />
+      </main>
       <ScrollToTopButton />
       <Footer />
     </>
