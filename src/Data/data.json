@@ -2,7 +2,7 @@
   "models": [
     {
       "id": "1",
-      "name": "Nike",
+      "name": "Nike Free Metcon 5",
       "glbFile": "/assets/nike1.glb",
       "price": "200",
       "iosSrc": "/assets/nike1.usdz",
@@ -12,7 +12,7 @@
     },
     {
       "id": "2",
-      "name": "Nike",
+      "name": "Nike Pegasus 40",
       "glbFile": "/assets/nike2.glb",
       "price": "300",
       "iosSrc": "/assets/nike2.usdz",
@@ -22,7 +22,7 @@
     },
     {
       "id": "3",
-      "name": "Nike",
+      "name": "Nike Dunk High",
       "glbFile": "/assets/nike3.glb",
       "price": "300",
       "iosSrc": "/assets/nike3.usdz",
@@ -32,7 +32,7 @@
     },
     {
       "id": "4",
-      "name": "Nike",
+      "name": "Nike Air Force ",
       "glbFile": "/assets/nike4.glb",
       "price": "500",
       "iosSrc": "/assets/nike4.usdz",
@@ -42,7 +42,7 @@
     },
     {
       "id": "5",
-      "name": "Nike",
+      "name": "Nike Invincible 3",
       "glbFile": "/assets/nike5.glb",
       "price": "250",
       "iosSrc": "/assets/nike5.usdz",
@@ -52,7 +52,7 @@
     },
     {
       "id": "6",
-      "name": "Nike",
+      "name": "Nike Court Legacy",
       "glbFile": "/assets/nike6.glb",
       "price": "300",
       "iosSrc": "/assets/nike6.usdz",
@@ -62,7 +62,7 @@
     },
     {
       "id": "7",
-      "name": "Nike",
+      "name": "Nike Pegasus Trail ",
       "glbFile": "/assets/nike7.glb",
       "price": "500",
       "iosSrc": "/assets/nike7.usdz",
@@ -72,7 +72,7 @@
     },
     {
       "id": "8",
-      "name": "Nike",
+      "name": "Nike Dunk Low SE",
       "glbFile": "/assets/nike8.glb",
       "price": "250",
       "iosSrc": "/assets/nike8.usdz",
@@ -82,7 +82,7 @@
     },
     {
       "id": "9",
-      "name": "Nike",
+      "name": "Nike Zegama",
       "glbFile": "/assets/nike9.glb",
       "price": "200",
       "iosSrc": "/assets/nike9.usdz",

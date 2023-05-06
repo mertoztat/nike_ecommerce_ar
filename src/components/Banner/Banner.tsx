@@ -20,15 +20,15 @@ const Banner = () => {
           <ModelBox
             iosSrc="/assets/NikeOpenBox.usdz"
             glbSrc="/assets/NikeOpenBox.glb"
-            width="20em"
-            height="20em"
+            // width="20em"
+            // height="20em"
           />
         ) : (
           <ModelBox
             iosSrc="/assets/nikeBox.usdz"
             glbSrc="/assets/nikeBox.glb"
-            width="20em"
-            height="20em"
+            // width="20em"
+            // height="20em"
           />
         )}
         {box ? (

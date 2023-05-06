@@ -61,4 +61,8 @@
   .highlights_right {
     margin-top: 25px;
   }
+  .highlights_left .model_view model-viewer {
+    width: 20em !important;
+    height: 20em !important;
+  }
 }

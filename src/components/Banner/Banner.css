@@ -98,4 +98,7 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .btn_explorer {
+    top: -15px;
+  }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "@google/model-viewer/lib/model-viewer";
 import Prompt from "images/Svg/prompt";
 import { IProps } from "./IProps";
+import "./ModelBox.css";
 
 declare global {
   namespace JSX {
@@ -33,7 +34,7 @@ interface ModelViewerJSX {
 
 const ModelBox: React.FC<IProps> = ({ iosSrc, glbSrc, width, height }) => {
   return (
-    <>
+    <div className="model_view">
       <model-viewer
         id="first"
         src={glbSrc}
@@ -63,7 +64,7 @@ const ModelBox: React.FC<IProps> = ({ iosSrc, glbSrc, width, height }) => {
           </div>
         </div>
       </model-viewer>
-    </>
+    </div>
   );
 };
 
