@@ -2,21 +2,21 @@
   "models": [
     {
       "name": "Nike",
-      "glbFile": "/assets/nike7.glb",
+      "glbFile": "/assets/nikedata/nike7.glb",
       "price": "200$",
-      "iosSrc": "/assets/nike7.usdz"
+      "iosSrc": "/assets/nikedata/nike7.usdz"
     },
     {
       "name": "Nike",
-      "glbFile": "/assets/nike4.glb",
+      "glbFile": "/assets/nikedata/nike4.glb",
       "price": "200$",
-      "iosSrc": "/assets/nike4.usdz"
+      "iosSrc": "/assets/nikedata/nike4.usdz"
     },
     {
       "name": "Nike",
-      "glbFile": "/assets/nike3.glb",
+      "glbFile": "/assets/nikedata/nike3.glb",
       "price": "200$",
-      "iosSrc": "/assets/nike3.usdz"
+      "iosSrc": "/assets/nikedata/nike3.usdz"
     }
   ]
 }
